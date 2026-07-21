@@ -1,95 +1,146 @@
-# ♻️ Smart Waste Segregation System
+# 🚗 Automated Parking System using ESP32
 
-A Smart Waste Segregation System built using the **ESP32** and multiple sensors to automatically classify waste into **Wet**, **Dry**, and **Metallic** categories. The project aims to make waste disposal more efficient by reducing manual sorting and encouraging proper waste segregation.
-
----
-
-## 📖 About the Project
-
-Waste segregation is the first step toward effective recycling, but it is often ignored or done incorrectly. This project was developed to automate that process using sensors and an ESP32 microcontroller.
-
-Whenever waste is placed into the system, sensors analyze its properties and the controller decides which category it belongs to. A servo motor then directs the waste into the correct bin automatically.
-
-The project demonstrates how embedded systems and IoT concepts can be applied to solve real-world environmental problems in a simple and cost-effective way.
+An IoT-based Automated Parking System developed using an ESP32 microcontroller, IR sensors, and servo motors. The system automates vehicle entry and exit, tracks available parking slots in real time, and controls entry/exit barriers without human intervention.
 
 ---
 
-## ✨ Features
+## 📌 Features
 
-* Automatic waste detection
-* Wet, dry, and metallic waste classification
-* Sensor-based decision making
-* Servo motor-controlled segregation
-* Low-cost hardware design
-* Easy to build and maintain
-* Suitable for educational and prototype applications
+- Automatic vehicle entry and exit
+- Real-time parking slot counting
+- Automatic gate control using servo motors
+- Prevents vehicle entry when parking is full
+- Displays available parking slots on the Serial Monitor
+- Low-cost and scalable design
 
 ---
 
-## 🛠️ Hardware Used
+## 🛠 Hardware Components
 
-* ESP32 Microcontroller
-* Infrared (IR) Sensor
-* Moisture Sensor
-* Inductive Proximity Sensor
-* Servo Motor (SG90/MG90S)
-* 5V Power Supply
-* Voltage Regulator
-* Connecting Wires
-* Plastic Waste Bins
-
-For detailed specifications, refer to **Components.md**.
+- ESP32 Development Board
+- 4 × IR Sensors
+- 2 × Servo Motors (SG90/MG90S)
+- 5V Power Supply
+- Jumper Wires
+- Breadboard
 
 ---
 
 ## 💻 Software Used
 
-* Arduino IDE
-* Embedded C/C++
-* Wokwi (Simulation)
+- Arduino IDE
+- ESP32Servo Library
 
 ---
 
-## ⚙️ How It Works
+## 🔌 Pin Configuration
 
-1. Waste is placed into the input section.
-2. The IR sensor detects the object.
-3. The moisture sensor checks if the waste is wet.
-4. The inductive sensor checks for metallic objects.
-5. The ESP32 processes the sensor readings.
-6. The servo motor rotates toward the appropriate bin.
-7. The waste is dropped into the correct compartment.
-
----
-
-
-## 🚀 Getting Started
-
-1. Clone this repository.
-2. Open the Arduino code in Arduino IDE.
-3. Connect the ESP32 and the required sensors.
-4. Upload the code.
-5. Power the system.
-6. Test the system using different types of waste.
+| Component | ESP32 GPIO |
+|-----------|------------|
+| IR Sensor 1 (Entry Detection) | GPIO 5 |
+| IR Sensor 2 (Entry Confirmation) | GPIO 18 |
+| IR Sensor 3 (Exit Detection) | GPIO 27 |
+| IR Sensor 4 (Exit Confirmation) | GPIO 26 |
+| Servo Motor 1 (Entry Gate) | GPIO 19 |
+| Servo Motor 2 (Exit Gate) | GPIO 25 |
 
 ---
 
-## 🎯 Applications
+## ⚙ Working Principle
 
-* Household waste management
-* Educational projects
-* Smart city concepts
-* Waste segregation awareness
-* IoT and embedded systems learning
+### Vehicle Entry
+
+1. IR Sensor 1 detects the approaching vehicle.
+2. ESP32 checks available parking slots.
+3. If slots are available:
+   - Entry gate opens.
+   - Occupied slot count increases.
+4. IR Sensor 2 detects that the vehicle has crossed the gate.
+5. Entry gate closes automatically.
+
+### Vehicle Exit
+
+1. IR Sensor 3 detects the vehicle.
+2. Exit gate opens.
+3. Occupied slot count decreases.
+4. IR Sensor 4 confirms the vehicle has exited.
+5. Exit gate closes automatically.
 
 ---
 
-## 🔮 Future Improvements
+## 📊 System Workflow
 
-* AI-based waste classification using a camera
-* Mobile application for monitoring
-* Cloud data logging
-* Solar-powered operation
-* Automatic bin-level monitoring
-* Smart collection scheduling
+```
+Vehicle Arrives
+       │
+       ▼
+IR Sensor 1 Detects Vehicle
+       │
+       ▼
+Check Available Slots
+       │
+ ┌─────┴─────┐
+ │           │
+Yes         No
+ │           │
+ ▼           ▼
+Open Gate   Gate Remains Closed
+ │
+ ▼
+Vehicle Passes Sensor 2
+ │
+ ▼
+Close Entry Gate
+ │
+ ▼
+Update Slot Count
+ │
+ ▼
+Vehicle Exits
+ │
+ ▼
+IR Sensor 3 Detects Vehicle
+ │
+ ▼
+Open Exit Gate
+ │
+ ▼
+Vehicle Passes Sensor 4
+ │
+ ▼
+Close Exit Gate
+ │
+ ▼
+Increase Available Slots
+```
 
+---
+
+## 📈 Advantages
+
+- Reduces manual work
+- Saves parking time
+- Cost-effective
+- Easy to implement
+- Scalable for larger parking areas
+- Suitable for smart parking applications
+
+---
+
+## 🚀 Future Enhancements
+
+- Mobile App Integration
+- Wi-Fi Dashboard
+- RFID-Based Authentication
+- QR Code Entry System
+- Online Slot Reservation
+- Automatic Billing System
+- Cloud Database Integration
+- AI-Based Parking Prediction
+- ANPR (Automatic Number Plate Recognition)
+
+---
+
+## 👨‍💻 Authors
+
+**Shivam Borane**

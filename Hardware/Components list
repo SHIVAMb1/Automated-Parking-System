@@ -1,71 +1,72 @@
-# Components Used
+# 🔧 Components List
 
-### 1. ESP32 Microcontroller
-
-* **Specification:** 32-bit MCU, Wi-Fi & Bluetooth, 3.3V logic
-* **Quantity:** 1
-* **Function:** Central control unit for processing.
+This document lists all the hardware and software components required to build the **Automated Parking System**.
 
 ---
 
-### 2. Infrared (IR) Sensor
+## Hardware Components
 
-* **Specification:** Operating Voltage: 3.3–5V, Digital Output
-* **Quantity:** 1
-* **Function:** Detects the presence of waste.
-
----
-
-### 3. Moisture Sensor
-
-* **Specification:** Operating Voltage: 3.3–5V, Analog Output
-* **Quantity:** 1
-* **Function:** Detects wet (biodegradable) waste.
+| Sr. No. | Component | Quantity | Description |
+| :-----: | --------- | :------: | ----------- |
+| 1 | ESP32 Development Board | 1 | Main microcontroller used to control the entire system. |
+| 2 | IR Sensor Module | 4 | Detects vehicle entry and exit. |
+| 3 | Servo Motor (SG90/MG90S) | 2 | Controls the entry and exit barriers. |
+| 4 | 5V Power Supply | 1 | Powers the ESP32, sensors, and servo motors. |
+| 5 | Breadboard | 1 | Used for prototype circuit connections. |
+| 6 | Jumper Wires | As Required | Used for electrical connections between components. |
+| 7 | USB Cable | 1 | Used to program and power the ESP32. |
 
 ---
 
-### 4. Inductive Proximity Sensor
+## ESP32 Pin Configuration
 
-* **Specification:** Operating Voltage: 6–36V (or 5V module variant)
-* **Quantity:** 1
-* **Function:** Detects metallic waste.
-
----
-
-### 5. Servo Motor (SG90/MG90S)
-
-* **Specification:** Operating Voltage: 4.8–6V, PWM Controlled
-* **Quantity:** 1
-* **Function:** Controls the flap for waste direction.
+| Component | GPIO Pin |
+| --------- | :------: |
+| IR Sensor 1 (Entry Detection) | GPIO 5 |
+| IR Sensor 2 (Entry Confirmation) | GPIO 18 |
+| IR Sensor 3 (Exit Detection) | GPIO 27 |
+| IR Sensor 4 (Exit Confirmation) | GPIO 26 |
+| Servo Motor 1 (Entry Gate) | GPIO 19 |
+| Servo Motor 2 (Exit Gate) | GPIO 25 |
 
 ---
 
-### 6. Power Supply Unit
+## Software Requirements
 
-* **Specification:** Input: 230V AC, Output: 5V DC Regulated
-* **Quantity:** 1
-* **Function:** Powers the entire system.
-
----
-
-### 7. Voltage Regulator
-
-* **Specification:** 7805 or Buck Converter (5V Output)
-* **Quantity:** 1
-* **Function:** Maintains a stable voltage supply.
+| Software | Purpose |
+| -------- | ------- |
+| Arduino IDE | Writing and uploading code to the ESP32 |
+| ESP32 Board Package | Enables ESP32 support in Arduino IDE |
+| ESP32Servo Library | Controls servo motors |
 
 ---
 
-### 8. Connecting Wires
+## System Specifications
 
-* **Specification:** Jumper wires / PCB traces
-* **Quantity:** As required
-* **Function:** Provides electrical connections.
+| Parameter | Value |
+| --------- | ----- |
+| Microcontroller | ESP32 |
+| Parking Capacity | 10 Slots |
+| Entry Sensors | 2 |
+| Exit Sensors | 2 |
+| Servo Motors | 2 |
+| Communication | USB Serial Monitor |
+| Power Supply | 5V DC |
 
 ---
 
-### 9. Plastic Containers
+## Applications
 
-* **Specification:** Trash bins
-* **Quantity:** 4
-* **Function:** Collects segregated waste.
+- Smart Parking Systems
+- Shopping Malls
+- Residential Societies
+- Office Buildings
+- Hospitals
+- Educational Institutions
+- Commercial Parking Areas
+
+---
+
+## Repository
+
+For complete source code, circuit diagrams, and project documentation, refer to the files available in this repository.

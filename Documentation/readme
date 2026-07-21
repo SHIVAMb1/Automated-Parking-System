@@ -1,0 +1,146 @@
+# 🚗 Automated Parking System using ESP32
+
+An IoT-based Automated Parking System developed using an ESP32 microcontroller, IR sensors, and servo motors. The system automates vehicle entry and exit, tracks available parking slots in real time, and controls entry/exit barriers without human intervention.
+
+---
+
+## 📌 Features
+
+- Automatic vehicle entry and exit
+- Real-time parking slot counting
+- Automatic gate control using servo motors
+- Prevents vehicle entry when parking is full
+- Displays available parking slots on the Serial Monitor
+- Low-cost and scalable design
+
+---
+
+## 🛠 Hardware Components
+
+- ESP32 Development Board
+- 4 × IR Sensors
+- 2 × Servo Motors (SG90/MG90S)
+- 5V Power Supply
+- Jumper Wires
+- Breadboard
+
+---
+
+## 💻 Software Used
+
+- Arduino IDE
+- ESP32Servo Library
+
+---
+
+## 🔌 Pin Configuration
+
+| Component | ESP32 GPIO |
+|-----------|------------|
+| IR Sensor 1 (Entry Detection) | GPIO 5 |
+| IR Sensor 2 (Entry Confirmation) | GPIO 18 |
+| IR Sensor 3 (Exit Detection) | GPIO 27 |
+| IR Sensor 4 (Exit Confirmation) | GPIO 26 |
+| Servo Motor 1 (Entry Gate) | GPIO 19 |
+| Servo Motor 2 (Exit Gate) | GPIO 25 |
+
+---
+
+## ⚙ Working Principle
+
+### Vehicle Entry
+
+1. IR Sensor 1 detects the approaching vehicle.
+2. ESP32 checks available parking slots.
+3. If slots are available:
+   - Entry gate opens.
+   - Occupied slot count increases.
+4. IR Sensor 2 detects that the vehicle has crossed the gate.
+5. Entry gate closes automatically.
+
+### Vehicle Exit
+
+1. IR Sensor 3 detects the vehicle.
+2. Exit gate opens.
+3. Occupied slot count decreases.
+4. IR Sensor 4 confirms the vehicle has exited.
+5. Exit gate closes automatically.
+
+---
+
+## 📊 System Workflow
+
+```
+Vehicle Arrives
+       │
+       ▼
+IR Sensor 1 Detects Vehicle
+       │
+       ▼
+Check Available Slots
+       │
+ ┌─────┴─────┐
+ │           │
+Yes         No
+ │           │
+ ▼           ▼
+Open Gate   Gate Remains Closed
+ │
+ ▼
+Vehicle Passes Sensor 2
+ │
+ ▼
+Close Entry Gate
+ │
+ ▼
+Update Slot Count
+ │
+ ▼
+Vehicle Exits
+ │
+ ▼
+IR Sensor 3 Detects Vehicle
+ │
+ ▼
+Open Exit Gate
+ │
+ ▼
+Vehicle Passes Sensor 4
+ │
+ ▼
+Close Exit Gate
+ │
+ ▼
+Increase Available Slots
+```
+
+---
+
+## 📈 Advantages
+
+- Reduces manual work
+- Saves parking time
+- Cost-effective
+- Easy to implement
+- Scalable for larger parking areas
+- Suitable for smart parking applications
+
+---
+
+## 🚀 Future Enhancements
+
+- Mobile App Integration
+- Wi-Fi Dashboard
+- RFID-Based Authentication
+- QR Code Entry System
+- Online Slot Reservation
+- Automatic Billing System
+- Cloud Database Integration
+- AI-Based Parking Prediction
+- ANPR (Automatic Number Plate Recognition)
+
+---
+
+## 👨‍💻 Authors
+
+**Shivam Borane**
