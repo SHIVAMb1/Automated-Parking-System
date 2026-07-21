@@ -1,0 +1,95 @@
+# ♻️ Smart Waste Segregation System
+
+A Smart Waste Segregation System built using the **ESP32** and multiple sensors to automatically classify waste into **Wet**, **Dry**, and **Metallic** categories. The project aims to make waste disposal more efficient by reducing manual sorting and encouraging proper waste segregation.
+
+---
+
+## 📖 About the Project
+
+Waste segregation is the first step toward effective recycling, but it is often ignored or done incorrectly. This project was developed to automate that process using sensors and an ESP32 microcontroller.
+
+Whenever waste is placed into the system, sensors analyze its properties and the controller decides which category it belongs to. A servo motor then directs the waste into the correct bin automatically.
+
+The project demonstrates how embedded systems and IoT concepts can be applied to solve real-world environmental problems in a simple and cost-effective way.
+
+---
+
+## ✨ Features
+
+* Automatic waste detection
+* Wet, dry, and metallic waste classification
+* Sensor-based decision making
+* Servo motor-controlled segregation
+* Low-cost hardware design
+* Easy to build and maintain
+* Suitable for educational and prototype applications
+
+---
+
+## 🛠️ Hardware Used
+
+* ESP32 Microcontroller
+* Infrared (IR) Sensor
+* Moisture Sensor
+* Inductive Proximity Sensor
+* Servo Motor (SG90/MG90S)
+* 5V Power Supply
+* Voltage Regulator
+* Connecting Wires
+* Plastic Waste Bins
+
+For detailed specifications, refer to **Components.md**.
+
+---
+
+## 💻 Software Used
+
+* Arduino IDE
+* Embedded C/C++
+* Wokwi (Simulation)
+
+---
+
+## ⚙️ How It Works
+
+1. Waste is placed into the input section.
+2. The IR sensor detects the object.
+3. The moisture sensor checks if the waste is wet.
+4. The inductive sensor checks for metallic objects.
+5. The ESP32 processes the sensor readings.
+6. The servo motor rotates toward the appropriate bin.
+7. The waste is dropped into the correct compartment.
+
+---
+
+
+## 🚀 Getting Started
+
+1. Clone this repository.
+2. Open the Arduino code in Arduino IDE.
+3. Connect the ESP32 and the required sensors.
+4. Upload the code.
+5. Power the system.
+6. Test the system using different types of waste.
+
+---
+
+## 🎯 Applications
+
+* Household waste management
+* Educational projects
+* Smart city concepts
+* Waste segregation awareness
+* IoT and embedded systems learning
+
+---
+
+## 🔮 Future Improvements
+
+* AI-based waste classification using a camera
+* Mobile application for monitoring
+* Cloud data logging
+* Solar-powered operation
+* Automatic bin-level monitoring
+* Smart collection scheduling
+

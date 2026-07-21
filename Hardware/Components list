@@ -1,0 +1,71 @@
+# Components Used
+
+### 1. ESP32 Microcontroller
+
+* **Specification:** 32-bit MCU, Wi-Fi & Bluetooth, 3.3V logic
+* **Quantity:** 1
+* **Function:** Central control unit for processing.
+
+---
+
+### 2. Infrared (IR) Sensor
+
+* **Specification:** Operating Voltage: 3.3–5V, Digital Output
+* **Quantity:** 1
+* **Function:** Detects the presence of waste.
+
+---
+
+### 3. Moisture Sensor
+
+* **Specification:** Operating Voltage: 3.3–5V, Analog Output
+* **Quantity:** 1
+* **Function:** Detects wet (biodegradable) waste.
+
+---
+
+### 4. Inductive Proximity Sensor
+
+* **Specification:** Operating Voltage: 6–36V (or 5V module variant)
+* **Quantity:** 1
+* **Function:** Detects metallic waste.
+
+---
+
+### 5. Servo Motor (SG90/MG90S)
+
+* **Specification:** Operating Voltage: 4.8–6V, PWM Controlled
+* **Quantity:** 1
+* **Function:** Controls the flap for waste direction.
+
+---
+
+### 6. Power Supply Unit
+
+* **Specification:** Input: 230V AC, Output: 5V DC Regulated
+* **Quantity:** 1
+* **Function:** Powers the entire system.
+
+---
+
+### 7. Voltage Regulator
+
+* **Specification:** 7805 or Buck Converter (5V Output)
+* **Quantity:** 1
+* **Function:** Maintains a stable voltage supply.
+
+---
+
+### 8. Connecting Wires
+
+* **Specification:** Jumper wires / PCB traces
+* **Quantity:** As required
+* **Function:** Provides electrical connections.
+
+---
+
+### 9. Plastic Containers
+
+* **Specification:** Trash bins
+* **Quantity:** 4
+* **Function:** Collects segregated waste.
