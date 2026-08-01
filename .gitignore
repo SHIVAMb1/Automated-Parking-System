@@ -1,0 +1,27 @@
+# Arduino IDE build artifacts
+build/
+*.hex
+*.elf
+*.bin
+*.map
+
+# Arduino IDE backup/autosave files
+*.ino.bak
+*.ino~
+
+# IDE / editor settings
+.vscode/
+.idea/
+*.swp
+
+# PlatformIO (if used instead of Arduino IDE)
+.pio/
+.pioenvs/
+.piolibdeps/
+
+# OS-generated files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
