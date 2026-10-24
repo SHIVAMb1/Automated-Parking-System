@@ -1,4 +1,4 @@
-<h1 align="center">🅿️ Automated Parking System (ESP32-Based)</h1>
+<h1 align="center">Automated Parking System (ESP32-Based)</h1>
 
 <p align="center">
   <em>An IoT-based automated parking system using an ESP32 microcontroller, IR sensors, and servo-controlled entry/exit gates.</em>
